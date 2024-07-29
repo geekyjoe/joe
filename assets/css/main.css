@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #6667ab;
+    color: whitesmoke;
+    font-family: 'Rajdhani';
+    font-weight: 600;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-family: 'Playwrite AR', sans-serif;
+    font-weight: 400;
+}
+
+header h1{
+    font-family: 'Playwrite AR', sans-serif;
+    font-weight: 400;
+}
+
+header p{
+    padding-top: 35px;
+    font-family: 'Playwrite AR', sans-serif;
+    font-weight: 50;
+}
+
+.hero {
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #B692C2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+}
+
+#about img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.skills-content .skill {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    background: #00f;
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(33.333% - 40px);
+}
+
+.project a {
+    color: #00f;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #00f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
