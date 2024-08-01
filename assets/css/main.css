@@ -171,22 +171,23 @@ form button {
     color: #00f;
 }
 
+.footer {
+    background-color: #31363F;
+    color: #D8D9CF;
+    text-align: center; /* center text */
+    padding: 20px 0; /* add top and bottom padding */
+}
+
+.footer a {
+    display: inline-block; /* make links inline-block to center them */
+    margin: 0 10px; /* add horizontal margin to links */
+}
+
 .footer a:link {
     color: #D8D9CF;
 }
 
 .footer a:hover {
-    color: #D58BDD;
+    color: whitesmoke;
     text-decoration: none;
-}
-
-.footer {
-    background-color: #555555;
-    padding: px;
-    color: #D8D9CF;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: auto;
-    display: flex;
-    position: relative;
 }
