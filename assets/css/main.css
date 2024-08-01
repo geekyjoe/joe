@@ -15,6 +15,41 @@ header {
     text-align: center;
 }
 
+.nav-item .nav-link {
+    margin: 5px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #555555;
+    transition: width 400ms ease-in-out;
+}
+
+.nav-item .nav-link:hover::after {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item .nav-link.active::after {
+    width: 100%;
+    left: 0;
+    transform: none;
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+
 .navbar-brand {
     font-family: 'Playwrite AR', sans-serif;
     font-weight: 400;
