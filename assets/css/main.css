@@ -171,9 +171,22 @@ form button {
     color: #00f;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
+.footer a:link {
+    color: #D8D9CF;
+}
+
+.footer a:hover {
+    color: #D58BDD;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #555555;
+    padding: px;
+    color: #D8D9CF;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: auto;
+    display: flex;
+    position: relative;
 }
