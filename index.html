@@ -1,126 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Pego | Web Developer</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Rajdhani:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">GeekyJoe</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
-                            <path d="M360-240v-80h480v80H360Zm0-200v-80h480v80H360ZM120-640v-80h720v80H120Z" />
-                        </svg>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="templates/about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="templates/project.html">Skills/Projects</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Blog</a>
-                            <a href="templates/contact.html" class="dropdown-item">Get in Touch</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="hero">
-        <h1>Joe Pego</h1>
-        <p>Web Developer</p>
-        <hr>
-    </div>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Message sent!");
+    });
+});
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-content">
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill">
-                <h3>CSS</h3>
-                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill">
-                <h3>Python</h3>
-                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-content">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Android Custom Project</h3>
-                <p>Description of Android custom project.</p>
-                <a href="#">View Project</a>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-        </div>
-    </section>
+const preloader = document.querySelector('#preloader');
+if (preloader) {
+  window.addEventListener('load', () => {
+    preloader.remove();
+  });
+}
 
-    <div class="footer">
-        <p>&copy; 2024 Ashutosh Gajjar ·
-            <a href="https://www.linkedin.com/in/ashutosh-gajjar-2936ba286/" target="_blank">LinkedIn</a> ·
-            <a href="mailto:joepgo1@hotmail.com?subject=Hello!">E-mail</a>
-        </p>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-</body>
-</html>
+const sentences = [
+  "Crafting Dynamic Web Solutions: Full Stack Developer & Problem Solver",
+  "Building scalable web applications with a focus on user experience",
+  "Creating innovative solutions for complex problems",
+  
+];
+
+let part = 0;
+let partIndex = 0;
+let interval;
+let deleting = false;
+const element = document.getElementById('typed');
+
+// Function to type text
+function type() {
+  const text = sentences[part];
+
+  if (!deleting) {
+      element.textContent = text.substring(0, partIndex + 1);
+      partIndex++;
+
+      // If the text is fully typed out, start deleting after a pause
+      if (partIndex === text.length) {
+          deleting = true;
+          clearInterval(interval);
+          setTimeout(() => {
+              interval = setInterval(type, 25);
+          }, 2000);
+      }
+  } else {
+      element.textContent = text.substring(0, partIndex - 1);
+      partIndex--;
+
+      // If the text is fully deleted, move to the next sentence
+      if (partIndex === 0) {
+          deleting = false;
+          part = (part + 1) % sentences.length; // Cycle through sentences
+          clearInterval(interval);
+          setTimeout(() => {
+              interval = setInterval(type, 100);
+          }, 500);
+      }
+  }
+}
+
+// Start typing
+interval = setInterval(type, 50);
