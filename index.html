@@ -1,64 +1,76 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        alert("Message sent!");
-    });
-});
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Pego | Web Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Rajdhani:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
 
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">GeekyJoe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                    <path d="M360-240v-80h480v80H360Zm0-200v-80h480v80H360ZM120-640v-80h720v80H120Z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components/project.html">Skills/Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Blog</a>
+                            <a href="components/contact.html" class="dropdown-item">Get in Touch</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="preloader"></div>
+    <div class="hero-section">
+        <h1>Joe Pego</h1>
+        <p>Full Stack Developer</p>
+        <hr>
+        <p>Hi, I'm a Full Stack Developer specializing in modern web applications.</p>
+        <p class="typing-text">
+            <span id="typed"></span>
+            <span class="cursor">|</span>
+        </p>
+        <button class="button">Learn More</button>
+    </div>  
+    <div class="footer">
+        <p>&copy; 2024 Ashutosh Gajjar ·
+            <a href="https://www.linkedin.com/in/ashutosh-gajjar-2936ba286/" target="_blank">LinkedIn</a> ·
+            <a href="mailto:joepgo1@htomail.com?subject=Hello!">E-mail</a>
+        </p>
+    </div>
 
-const preloader = document.querySelector('#preloader');
-if (preloader) {
-  window.addEventListener('load', () => {
-    preloader.remove();
-  });
-}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
 
-const sentences = [
-  "Crafting Dynamic Web Solutions: Full Stack Developer & Problem Solver",
-  "Building scalable web applications with a focus on user experience",
-  "Creating innovative solutions for complex problems",
-  
-];
-
-let part = 0;
-let partIndex = 0;
-let interval;
-let deleting = false;
-const element = document.getElementById('typed');
-
-// Function to type text
-function type() {
-  const text = sentences[part];
-
-  if (!deleting) {
-      element.textContent = text.substring(0, partIndex + 1);
-      partIndex++;
-
-      // If the text is fully typed out, start deleting after a pause
-      if (partIndex === text.length) {
-          deleting = true;
-          clearInterval(interval);
-          setTimeout(() => {
-              interval = setInterval(type, 25);
-          }, 2000);
-      }
-  } else {
-      element.textContent = text.substring(0, partIndex - 1);
-      partIndex--;
-
-      // If the text is fully deleted, move to the next sentence
-      if (partIndex === 0) {
-          deleting = false;
-          part = (part + 1) % sentences.length; // Cycle through sentences
-          clearInterval(interval);
-          setTimeout(() => {
-              interval = setInterval(type, 100);
-          }, 500);
-      }
-  }
-}
-
-// Start typing
-interval = setInterval(type, 50);
+</html>
