@@ -1,5 +1,5 @@
 :root {
-    --color-bg: white;
+    --color-bg: #fffafa;
     --text: black;
     --udl: #555555;
     --tooltip: #0C0C0C;
@@ -10,10 +10,10 @@
     --hover: #44444420;
 }
 :root[data-mode="dark"] {
-    --color-bg: #121113;
+    --color-bg: #28272c;
     --text: white;
     --udl: #e6e6e9;
-    --footer: #1e1e24;
+    --footer: #28272c;
     --svg: #eeeeee;
     --hover: #2f2f2f;
 }

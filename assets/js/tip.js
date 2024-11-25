@@ -1,8 +1,6 @@
 tippy('.tg', {
     duration: 0,
     arrow: true,
-    placement: 'bottom',
+    placement: 'left',
     delay: [500, 0],
-    animation: 'scale',
-    theme: 'custom',
   });
