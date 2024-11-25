@@ -6,12 +6,16 @@
     --tooltext: white;
     --border: #b4b4b4;
     --footer: #31363F;
+    --svg: #424242;
+    --hover: #44444420;
 }
 :root[data-mode="dark"] {
     --color-bg: #121113;
     --text: white;
     --udl: #e6e6e9;
     --footer: #1e1e24;
+    --svg: #eeeeee;
+    --hover: #2f2f2f;
 }
 
 body {
@@ -35,15 +39,18 @@ body {
     text-decoration: none;
 }
 .tg svg {
-    color: var(--text);
+    color: var(--svg);
 }
 .tg {
-    /* background: #00f; */
     cursor: pointer;
-    padding: 0;
+    padding: 3.5px 3px;
+    border-radius: 10px;
     margin: 0;
     display: flex;
     place-items: center end;
+}
+.tg:hover {
+    background: var(--hover);
 }
 .nav-links {
     margin-inline: auto;
@@ -274,22 +281,22 @@ h2 {
 }
 
 .footer a:hover {
-    color: whitesmoke;
+    color: #D58BDD;
     text-decoration: underline;
 }
 
 .footer {
     position: relative;
     background-color: var(--footer);
-    color: #D8D9CF;
     text-align: center;
     /* center text */
     padding: 5px 0;
     /* add top and bottom padding */
 }
 
-.footer a {
+.footer p {
     display: inline-block;
+    color: #D8D9CF;
     /* make links inline-block to center them */
     margin: 0 10px;
     /* add horizontal margin to links */
