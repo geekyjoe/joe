@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        alert("Message sent!");
-    });
-});
-
-
-
 const preloader = document.querySelector('#preloader');
 if (preloader) {
   window.addEventListener('load', () => {
@@ -62,3 +52,14 @@ function type() {
 
 // Start typing
 interval = setInterval(type, 50);
+
+// Function to toggle between dark and light mode
+const toggleTheme = () => {
+  const currentMode = document.documentElement.getAttribute('data-mode');
+  document.documentElement.setAttribute('data-mode', currentMode === 'dark' ? '' : 'dark');
+};
+
+// Event listener for tg class to toggle themes
+document.querySelectorAll('.tg').forEach((element) => {
+  element.addEventListener('click', toggleTheme);
+});
