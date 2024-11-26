@@ -302,18 +302,6 @@ h2 {
 }
 @media screen and (max-width: 768px) {
     .navbar {
-        font-size: 14px;
-    }
-    .nav-link {
-        font-size: 12px;
-    }
-    .tg svg {
-        height: 22px;
-        width: 22px;
-    }
-}
-@media screen and (max-width: 425px) {
-    .navbar {
         font-size: 12px;
     }
     .nav-link {
