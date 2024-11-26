@@ -6,60 +6,18 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    /* color: whitesmoke; */
-    font-family: 'Rajdhani';
-    /* font-weight: 600; */
-    text-align: center;
-}
-
-.navbar-brand {
-    font-family: 'Playwrite AR', sans-serif;
-    font-weight: 400;
-}
-
-header h1{
-    font-family: 'Playwrite AR', sans-serif;
-    font-weight: 400;
-}
-
-header p{
-    padding-top: 35px;
-    font-family: 'Playwrite AR', sans-serif;
-    font-weight: 50;
-}
-
-.hero {
-    margin-top: 50px;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: #B692C2;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+div.main {
+    max-height: 100dvh;
+    height: 85dvh;
 }
 
 #about {
     color: var(--text);
-    border-radius: 10px;
     margin: 10px 50px;
 }
 
 .about-content {
-    margin: 0   ;
+    margin: 0;
     padding: 10px;
 }
 
@@ -68,6 +26,28 @@ header p{
     /* flex-wrap: wrap-reverse; */
     height: 200px;
     width: 200px;
-    border-radius: 15%;
+    border-radius: 20px;
     margin: 10px 20px 10px 10px;
+}
+.blurred {
+    filter: blur(5px); /* Adjust the value to increase or decrease the blur */
+}
+
+/* Optional: To prevent selection revealing text */
+.blurred::selection {
+    background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        margin: 0;
+    }
+    #about img {
+        border-radius: 10px;
+        margin: 10px 20px 10px 10px;
+    }
+    .about-content {
+        margin: 0;
+        padding: 0;
+    }
 }
